@@ -18,7 +18,7 @@ class Welcome extends Component {
         this.props.navigation.navigate('Comments');
     }
     likePress = ()=>{
-       if (this.state.like == null) {
+       if (this.state.color == '#666') {
         this.setState(
             {
                 like:1,

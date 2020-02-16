@@ -42,17 +42,17 @@ class Comments extends Component {
         }
     }
     handlePress = () => {
-        const afterPush = this.state.data;
-        const user =this.state.user
-        const ava = this.state.ava
-        afterPush.push({
-            ava: ava,
-            user: user,
-            comment:this.state.comments
-        });
+       
         this.setState({
-          data: afterPush,
-          comments: ''
+            data:[
+                {
+                    user:this.state.user,
+                    ava: this.state.ava,
+                    comment:this.state.comments
+                },
+                ...this.state.data
+            ],
+            comments:""
         })
     }
 
